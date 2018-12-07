@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Matty1515/gas-mark-converter/issues"
   },
-  "homepage": "https://github.com/Matty1515/gas-mark-converter#readme"
+  "homepage": "https://github.com/Matty1515/gas-mark-converter#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-webserver": "^0.9.1"
+  }
 }
