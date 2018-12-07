@@ -1,0 +1,19 @@
+{
+  "name": "gas-mark-converter",
+  "version": "1.0.0",
+  "description": "Converts gas mark into other temperature units",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matty1515/gas-mark-converter.git"
+  },
+  "author": "Matty1515",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matty1515/gas-mark-converter/issues"
+  },
+  "homepage": "https://github.com/Matty1515/gas-mark-converter#readme"
+}
