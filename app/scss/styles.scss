@@ -1,56 +1,61 @@
-/* 
-	=====Stylesheet Order=====
+/* 	=====Stylesheet Order=====
 	
-	1. Global Styles 
-	2. Navbar
-	3. Sidenav
-	4. Jumbotron
-	5. Form Cards
-	6. Text Divs
-	7. Footer
-	
-	=====Colour Scheme=====
-	
-	#eae7dc (light grey)
-	#8e8d8a (dark grey) 
-	#e98074 (light red) 
-	#e85a4f (red)
-	
-	=====Fonts=====
-	
-	Header - Use this to find a title font - https://www.typewolf.com/site-of-the-day/fonts/raleway font
-	Body - 'Raleway', sans-serif;
+	1. Colour Scheme
+	2. Font Styles
+	3. Global Styles 
+	4. Navbar
+	5. Sidenav
+	6. Jumbotron
+	7. Form Cards
+	8. Text Divs
+	9. Footer
 */
 
+/*	=====Colour Scheme===== */
 
-/*	=====Global Styles=====
-*/
-div {
-	font-size  : 18px;
+$colour-primary: #fff; /* #fff white */
+$colour-secondary: #eae7dc; /* #eae7dc light grey */
+$colour-text: #000; /* #000 black */
+
+/*	=====Fonts===== */
+
+%style-header {
+	font-family: 'Playfair Display', serif;
+	text-transform: uppercase;
+}
+%style-subheader {
 	font-family: 'Raleway', sans-serif;
-	line-height: 1.7;
+}
+%style-body {
+	font-family: 'Raleway', sans-serif;
 }
 
+/*	=====Global Styles===== */
+
+div {
+	@extend %style-body;
+	font-size  : 18px;
+	line-height: 1.7;
+}
 * {
 	box-sizing: border-box;
 }
-
 
 /* 	=====Navbar===== 
 -Change color of the toggler icon
 -Make a:hover background color fit the whole space 
 */
 .navbar {
-	background-color: white;
+	background-color: $colour-primary;
 	box-shadow      : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 	z-index         : 2;
 }
 .navbar a {
-	color: black;
+	color: $colour-text;
 }
 .navbar a:hover {
-	color: black;
-	background-color: #eae7dc;
+	color: $colour-text;
+	background-color: $colour-secondary;
 }
 
 
@@ -67,34 +72,41 @@ div {
 	z-index         : 1; /* Stay on top */
 	top             : 0; /* Stay at the top */
 	left            : 0;
-	background-color: #111; /* Black*/
+	background-color: #111; /* Black - TO BE CHANGED */
 	overflow-x      : hidden; /* Disable horizontal scroll */
 	padding-top     : 80px; /* Place content 60px from the top */
+	text-align: center;
 	transition      : 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 .sidenav li {
 	list-style-type: none;
 	padding        : 5px;
-	margin-right   : 10px;
+	margin-right   : 40px;
 }
 .sidenav li:hover {
-	background-color: #eae7dc;
+	background-color: $colour-secondary;
 }
 .sidenav-active {
-	background-color: white;
+	background-color: $colour-primary;
 	width: 270px;
+}
+.temp-symbol {
+	@extend %style-header;
+	font-weight: bold;
+	font-size: 50px;
 }
 
 
 /*	=====Jumbotron===== 
 */
 #backgroundDiv {
-	background-color: #eae7dc;
+	background-color: $colour-secondary;
 	padding-bottom: 50px;
 }
 
 .jumbotron h1 {
-	color: #00324a;
+	@extend %style-header;
+	color: $colour-text;
 	font-size: 5.063em;
 }
 
@@ -105,34 +117,41 @@ div {
 .card {
 	margin: 20px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-	background-color: #e85a4f;
+	width: 450px;
 }
-
+.card h2 {
+	@extend %style-subheader;
+}
 .card-body p {
 	font-size: 2em;
 	font-weight: bold;
 }
 
 
-/*	=====Text Divs=====
-*/
+/*	=====Text Divs===== */
+
 #informationDiv {
 	padding-top: 50px;
 	padding-bottom: 25px;
 }
-
+#informationDiv h2 {
+	@extend %style-subheader;
+}
 
 /*	=====Footer=====
 -Get rid of JavaScript footer when done
 */
+
 #footerDiv {
-	background-color: #eae7dc;
+	background-color: $colour-secondary;
 	padding-top: 50px;
 	padding-bottom: 25px;
 }
-
+#footerDiv h2 {
+	@extend %style-subheader;
+}
 #javascriptFooter {
 	background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
-	padding-top: 10px; /* Change back to 100px */
-	color: rgb(204, 204, 204);
+	padding-top: 10px;
+	color: $colour-secondary;
 }

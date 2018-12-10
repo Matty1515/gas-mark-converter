@@ -14,9 +14,6 @@ $('.sidenav').on('mouseenter', () => {
 });
 
 // Fades out and in the temperature cards
-$('#gasMarkLi').on('click', () => {
-	$('#gasMarkCard').fadeToggle('slow');
-});
 $('#fahrenheitLi').on('click', () => {
 	$('#fahrenheitCard').fadeToggle('slow');
 });
@@ -43,8 +40,7 @@ function printTemperatures(kelvin, celsius, fahrenheit, gasMark) {
 	printGasMark.innerHTML = "Gas Mark " + gasMark;
 }
 
-// create a function that stops inputs that are not a number
-
+// create a function that stops an input that is not a number
 function gasMarkChecker(gasMark, celsius) {
 	if (gasMark < 1) {
 		// impossible value. Use 1/2 or 1/4 for fractions

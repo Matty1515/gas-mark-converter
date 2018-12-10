@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 <!-- External frameworks & files -->
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="css/styles.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -27,12 +27,12 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="navbar-nav">
+			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
+					<a class="nav-link" href="#">Calculations</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Contact</a>
+					<a class="nav-link" href="#">History</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Resources</a>
@@ -47,17 +47,16 @@
 		<div class="col-lg-1 col-md-2 col-sm-2">
 			<div class="sidenav">
 				<ul>
-					<li id="gasMarkLi">Gas Mark</li>
-					<li id="fahrenheitLi">Fahrenheit</li>
-					<li id="celsiusLi">Celsius</li>
-					<li id="kelvinLi">Kelvin</li>
+					<li id="fahrenheitLi"><span class="temp-symbol">°F</span><br>Fahrenheit</li>
+					<li id="celsiusLi"><span class="temp-symbol">°C</span><br>Celsius</li>
+					<li id="kelvinLi"><span class="temp-symbol">K</span><br>Kelvin</li>
 				</ul>
 			</div>
 		</div>
 		<div class="col-lg-11 col-md-10 col-sm-10">
 			<div style="background:transparent !important" class="jumbotron jumbotron-fluid">
 				<div class="container">
-					<h1>Gas Mark Converter App</h1>
+					<h1>Gas Mark Converter</h1>
 				</div>
 			</div>
 			<div class="container">
@@ -66,7 +65,7 @@
 			<div class="container" id="cardContainer">
 				<div class="row" id="cardFolder">
 					<div class="col-lg-6">
-						<div class="card" id="gasMarkCard" style="width:400px">
+						<div class="card" id="gasMarkCard">
 							<div class="card-header">
 								<h2>Gas Mark</h2>
 							</div>
@@ -87,7 +86,7 @@
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<div class="card" id="fahrenheitCard" style="width:400px">
+						<div class="card" id="fahrenheitCard">
 							<div class="card-header">
 								<h2>Fahrenheit</h2>
 							</div>
@@ -108,7 +107,7 @@
 						</div>
 					</div>				
 					<div class="col-lg-6">
-						<div class="card" id="celsiusCard" style="width:400px">
+						<div class="card" id="celsiusCard">
 							<div class="card-header">
 								<h2>Celsius</h2>
 							</div>
@@ -129,7 +128,7 @@
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<div class="card" id="kelvinCard" style="width:400px">
+						<div class="card" id="kelvinCard">
 							<div class="card-header">
 								<h2>Kelvin</h2>
 							</div>
@@ -168,15 +167,15 @@
 	<div class="container">
 		<div class="row text-center text-xs-center text-sm-left text-md-left">
 			<div class="col-xs-12 col-sm-4 col-md-4">
-				<h3>Internal Links</h3>
+				<h2>Internal Links</h2>
 				<ul>
-					<li>About</li>
-					<li>Contact</li>
+					<li>Calculations</li>
+					<li>History</li>
 					<li>Resources</li>
 				</ul>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-4">
-				<h3>External Resources</h3>
+				<h2>External Resources</h2>
 				<ul>
 					<li>Wiki Gas Mark</li>
 					<li>Wiki Oven Conversions</li>
@@ -184,7 +183,7 @@
 				</ul>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-4">
-				<h3>External Links</h3>
+				<h2>External Links</h2>
 				<ul>
 					<li><i class="fa fa-github"></i> GitHub</li>
 					<li><i class="fa fa-envelope"></i> Email</li>

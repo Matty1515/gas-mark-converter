@@ -1,31 +1,33 @@
-/* 
-	=====Stylesheet Order=====
+/* 	=====Stylesheet Order=====
 	
-	1. Global Styles 
-	2. Navbar
-	3. Sidenav
-	4. Jumbotron
-	5. Form Cards
-	6. Text Divs
-	7. Footer
-	
-	=====Colour Scheme=====
-	
-	#eae7dc (light grey)
-	#8e8d8a (dark grey) 
-	#e98074 (light red) 
-	#e85a4f (red)
-	
-	=====Fonts=====
-	
-	Header - Use this to find a title font - https://www.typewolf.com/site-of-the-day/fonts/raleway font
-	Body - 'Raleway', sans-serif;
+	1. Colour Scheme
+	2. Font Styles
+	3. Global Styles 
+	4. Navbar
+	5. Sidenav
+	6. Jumbotron
+	7. Form Cards
+	8. Text Divs
+	9. Footer
 */
-/*	=====Global Styles=====
-*/
+/*	=====Colour Scheme===== */
+/* #fff white */
+/* #eae7dc light grey */
+/* #000 black */
+/*	=====Fonts===== */
+.temp-symbol, .jumbotron h1 {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase; }
+
+.card h2, #informationDiv h2, #footerDiv h2 {
+  font-family: 'Raleway', sans-serif; }
+
+div {
+  font-family: 'Raleway', sans-serif; }
+
+/*	=====Global Styles===== */
 div {
   font-size: 18px;
-  font-family: 'Raleway', sans-serif;
   line-height: 1.7; }
 
 * {
@@ -36,15 +38,15 @@ div {
 -Make a:hover background color fit the whole space 
 */
 .navbar {
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
   z-index: 2; }
 
 .navbar a {
-  color: black; }
+  color: #000; }
 
 .navbar a:hover {
-  color: black;
+  color: #000;
   background-color: #eae7dc; }
 
 /* 	=====Sidenav=====
@@ -66,25 +68,30 @@ div {
   /* Stay at the top */
   left: 0;
   background-color: #111;
-  /* Black*/
+  /* Black - TO BE CHANGED */
   overflow-x: hidden;
   /* Disable horizontal scroll */
   padding-top: 80px;
   /* Place content 60px from the top */
+  text-align: center;
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */ }
 
 .sidenav li {
   list-style-type: none;
   padding: 5px;
-  margin-right: 10px; }
+  margin-right: 40px; }
 
 .sidenav li:hover {
   background-color: #eae7dc; }
 
 .sidenav-active {
-  background-color: white;
+  background-color: #fff;
   width: 270px; }
+
+.temp-symbol {
+  font-weight: bold;
+  font-size: 50px; }
 
 /*	=====Jumbotron===== 
 */
@@ -93,7 +100,7 @@ div {
   padding-bottom: 50px; }
 
 .jumbotron h1 {
-  color: #00324a;
+  color: #000;
   font-size: 5.063em; }
 
 /*	=====Form Cards=====
@@ -102,14 +109,13 @@ div {
 .card {
   margin: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-  background-color: #e85a4f; }
+  width: 450px; }
 
 .card-body p {
   font-size: 2em;
   font-weight: bold; }
 
-/*	=====Text Divs=====
-*/
+/*	=====Text Divs===== */
 #informationDiv {
   padding-top: 50px;
   padding-bottom: 25px; }
@@ -125,5 +131,4 @@ div {
 #javascriptFooter {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
   padding-top: 10px;
-  /* Change back to 100px */
-  color: #cccccc; }
+  color: #eae7dc; }
