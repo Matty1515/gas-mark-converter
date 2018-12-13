@@ -13,7 +13,7 @@ $('.sidenav').on('mouseenter', () => {
 	$('.sidenav').removeClass('sidenav-active');
 });
 
-// Fades out and in the temperature cards
+// Fades out and in the temperature cards when clicked in the sidenav
 $('#fahrenheitLi').on('click', () => {
 	$('#fahrenheitCard').fadeToggle('slow');
 });
@@ -23,6 +23,7 @@ $('#celsiusLi').on('click', () => {
 $('#kelvinLi').on('click', () => {
 	$('#kelvinCard').fadeToggle('slow');
 });
+
 
 
 // ==========Temperature Calculations==========

@@ -1,39 +1,42 @@
 /* 	=====Stylesheet Order=====
 	
-	1. Colour Scheme
-	2. Font Styles
-	3. Global Styles 
-	4. Navbar
-	5. Sidenav
-	6. Jumbotron
-	7. Form Cards
-	8. Text Divs
-	9. Footer
+	1. House Style
+	2. Global Styles 
+	3. Navbar
+	4. Sidenav
+	5. Jumbotron
+	6. Form Cards
+	7. Text Divs
+	8. Footer
 */
 
-/*	=====Colour Scheme===== */
+/*	=====House Style===== */
 
-$colour-primary: #fff; /* #fff white */
-$colour-secondary: #eae7dc; /* #eae7dc light grey */
-$colour-text: #000; /* #000 black */
+$colour-primary: #fff; /* white */
+$colour-secondary: #eae7dc; /* light grey */
+$colour-text: #000; /* black */
 
-/*	=====Fonts===== */
+$transition-speed: 0.5s;
+$transition-scale: scale(1.05);
 
-%style-header {
+$shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$shadow-hover: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+%font-header {
 	font-family: 'Playfair Display', serif;
 	text-transform: uppercase;
 }
-%style-subheader {
+%font-subheader {
 	font-family: 'Raleway', sans-serif;
 }
-%style-body {
+%font-body {
 	font-family: 'Raleway', sans-serif;
 }
 
 /*	=====Global Styles===== */
 
 div {
-	@extend %style-body;
+	@extend %font-body;
 	font-size  : 18px;
 	line-height: 1.7;
 }
@@ -47,7 +50,7 @@ div {
 */
 .navbar {
 	background-color: $colour-primary;
-	box-shadow      : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+	box-shadow      : $shadow;
 	z-index         : 2;
 }
 .navbar a {
@@ -62,8 +65,6 @@ div {
 /* 	=====Sidenav=====
 -Get rid of sidenav comments
 -Change inactive background colour to white
--Add glyphicons for each temperature option
--Make it appear under the navbar with z-index somehow
 */
 .sidenav {
 	height          : 100%; /* 100% Full-height */
@@ -76,28 +77,31 @@ div {
 	overflow-x      : hidden; /* Disable horizontal scroll */
 	padding-top     : 80px; /* Place content 60px from the top */
 	text-align: center;
-	transition      : 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+	transition      : $transition-speed; /* 0.5 second transition effect to slide in the sidenav */
 }
 .sidenav li {
 	list-style-type: none;
 	padding        : 5px;
 	margin-right   : 40px;
+	transition      : $transition-speed;
 }
 .sidenav li:hover {
 	background-color: $colour-secondary;
+	cursor: pointer;
+	transform: $transition-scale;
 }
 .sidenav-active {
 	background-color: $colour-primary;
 	width: 270px;
 }
 .temp-symbol {
-	@extend %style-header;
+	@extend %font-header;
 	font-weight: bold;
 	font-size: 50px;
 }
 
 
-/*	=====Jumbotron===== 
+/*    =====Jumbotron===== 
 */
 #backgroundDiv {
 	background-color: $colour-secondary;
@@ -105,7 +109,7 @@ div {
 }
 
 .jumbotron h1 {
-	@extend %style-header;
+	@extend %font-header;
 	color: $colour-text;
 	font-size: 5.063em;
 }
@@ -115,16 +119,24 @@ div {
 -Form inspo - https://codemyui.com/login-form-visual-cues-invalid-input/ form
 */
 .card {
+	box-shadow: $shadow;
 	margin: 20px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 	width: 450px;
+	transition: $transition-speed;
+}
+.card:hover {
+	box-shadow: $shadow-hover;
+	transform: $transition-scale;
 }
 .card h2 {
-	@extend %style-subheader;
+	@extend %font-subheader;
 }
 .card-body p {
 	font-size: 2em;
 	font-weight: bold;
+}
+.form-sub button:hover {
+	cursor: pointer;
 }
 
 
@@ -135,7 +147,7 @@ div {
 	padding-bottom: 25px;
 }
 #informationDiv h2 {
-	@extend %style-subheader;
+	@extend %font-subheader;
 }
 
 /*	=====Footer=====
@@ -148,7 +160,14 @@ div {
 	padding-bottom: 25px;
 }
 #footerDiv h2 {
-	@extend %style-subheader;
+	@extend %font-subheader;
+}
+.footer-button {
+	transition: $transition-speed;
+}
+.footer-button:hover {
+	transform: $transition-scale;
+	cursor: pointer;
 }
 #javascriptFooter {
 	background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));

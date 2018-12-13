@@ -1,20 +1,18 @@
 /* 	=====Stylesheet Order=====
 	
-	1. Colour Scheme
-	2. Font Styles
-	3. Global Styles 
-	4. Navbar
-	5. Sidenav
-	6. Jumbotron
-	7. Form Cards
-	8. Text Divs
-	9. Footer
+	1. House Style
+	2. Global Styles 
+	3. Navbar
+	4. Sidenav
+	5. Jumbotron
+	6. Form Cards
+	7. Text Divs
+	8. Footer
 */
-/*	=====Colour Scheme===== */
-/* #fff white */
-/* #eae7dc light grey */
-/* #000 black */
-/*	=====Fonts===== */
+/*	=====House Style===== */
+/* white */
+/* light grey */
+/* black */
 .temp-symbol, .jumbotron h1 {
   font-family: 'Playfair Display', serif;
   text-transform: uppercase; }
@@ -39,7 +37,7 @@ div {
 */
 .navbar {
   background-color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   z-index: 2; }
 
 .navbar a {
@@ -52,8 +50,6 @@ div {
 /* 	=====Sidenav=====
 -Get rid of sidenav comments
 -Change inactive background colour to white
--Add glyphicons for each temperature option
--Make it appear under the navbar with z-index somehow
 */
 .sidenav {
   height: 100%;
@@ -80,10 +76,13 @@ div {
 .sidenav li {
   list-style-type: none;
   padding: 5px;
-  margin-right: 40px; }
+  margin-right: 40px;
+  transition: 0.5s; }
 
 .sidenav li:hover {
-  background-color: #eae7dc; }
+  background-color: #eae7dc;
+  cursor: pointer;
+  transform: scale(1.05); }
 
 .sidenav-active {
   background-color: #fff;
@@ -93,7 +92,7 @@ div {
   font-weight: bold;
   font-size: 50px; }
 
-/*	=====Jumbotron===== 
+/*    =====Jumbotron===== 
 */
 #backgroundDiv {
   background-color: #eae7dc;
@@ -107,13 +106,21 @@ div {
 -Form inspo - https://codemyui.com/login-form-visual-cues-invalid-input/ form
 */
 .card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   margin: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-  width: 450px; }
+  width: 450px;
+  transition: 0.5s; }
+
+.card:hover {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  transform: scale(1.05); }
 
 .card-body p {
   font-size: 2em;
   font-weight: bold; }
+
+.form-sub button:hover {
+  cursor: pointer; }
 
 /*	=====Text Divs===== */
 #informationDiv {
@@ -127,6 +134,13 @@ div {
   background-color: #eae7dc;
   padding-top: 50px;
   padding-bottom: 25px; }
+
+.footer-button {
+  transition: 0.5s; }
+
+.footer-button:hover {
+  transform: scale(1.05);
+  cursor: pointer; }
 
 #javascriptFooter {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
