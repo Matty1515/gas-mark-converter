@@ -65,10 +65,11 @@ div {
 /* 	=====Sidenav=====
 -Get rid of sidenav comments
 -Change inactive background colour to white
+-Make sidenav same height as container https://stackoverflow.com/questions/2997767/how-do-i-keep-two-side-by-side-divs-the-same-height
 */
 .sidenav {
 	height          : 100%; /* 100% Full-height */
-	width           : 90px; /* 0 width - change this with JavaScript */
+	width           : 90px;
 	position        : fixed; /* Stay in place */
 	z-index         : 1; /* Stay on top */
 	top             : 0; /* Stay at the top */
@@ -76,28 +77,31 @@ div {
 	background-color: #111; /* Black - TO BE CHANGED */
 	overflow-x      : hidden; /* Disable horizontal scroll */
 	padding-top     : 80px; /* Place content 60px from the top */
-	text-align: center;
+	text-align      : center;
 	transition      : $transition-speed; /* 0.5 second transition effect to slide in the sidenav */
 }
 .sidenav li {
 	list-style-type: none;
 	padding        : 5px;
 	margin-right   : 40px;
-	transition      : $transition-speed;
+	transition     : $transition-speed;
 }
 .sidenav li:hover {
 	background-color: $colour-secondary;
-	cursor: pointer;
-	transform: $transition-scale;
+	cursor          : pointer;
+	transform       : $transition-scale;
+}
+.sidenav-button-active {
+	background-color: $colour-secondary;
 }
 .sidenav-active {
 	background-color: $colour-primary;
-	width: 270px;
+	width           : 270px;
 }
 .temp-symbol {
 	@extend %font-header;
 	font-weight: bold;
-	font-size: 50px;
+	font-size  : 50px;
 }
 
 

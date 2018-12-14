@@ -50,12 +50,12 @@ div {
 /* 	=====Sidenav=====
 -Get rid of sidenav comments
 -Change inactive background colour to white
+-Make sidenav same height as container https://stackoverflow.com/questions/2997767/how-do-i-keep-two-side-by-side-divs-the-same-height
 */
 .sidenav {
   height: 100%;
   /* 100% Full-height */
   width: 90px;
-  /* 0 width - change this with JavaScript */
   position: fixed;
   /* Stay in place */
   z-index: 1;
@@ -83,6 +83,9 @@ div {
   background-color: #eae7dc;
   cursor: pointer;
   transform: scale(1.05); }
+
+.sidenav-button-active {
+  background-color: #eae7dc; }
 
 .sidenav-active {
   background-color: #fff;

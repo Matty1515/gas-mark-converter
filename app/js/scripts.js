@@ -16,14 +16,16 @@ $('.sidenav').on('mouseenter', () => {
 // Fades out and in the temperature cards when clicked in the sidenav
 $('#fahrenheitLi').on('click', () => {
 	$('#fahrenheitCard').fadeToggle('slow');
+	$('#fahrenheitLi').toggleClass('sidenav-button-active');
 });
 $('#celsiusLi').on('click', () => {
 	$('#celsiusCard').fadeToggle('slow');
+	$('#celsiusLi').toggleClass('sidenav-button-active');
 });
 $('#kelvinLi').on('click', () => {
 	$('#kelvinCard').fadeToggle('slow');
+	$('#kelvinLi').toggleClass('sidenav-button-active');
 });
-
 
 
 // ==========Temperature Calculations==========
