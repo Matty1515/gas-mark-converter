@@ -17,7 +17,7 @@
   font-family: 'Playfair Display', serif;
   text-transform: uppercase; }
 
-.card h2, #informationDiv h2, #footerDiv h2 {
+.card h2, .text-div h2, #footerDiv h2 {
   font-family: 'Raleway', sans-serif; }
 
 div {
@@ -51,23 +51,21 @@ div {
 -Get rid of sidenav comments
 -Change inactive background colour to white
 -Make sidenav same height as container https://stackoverflow.com/questions/2997767/how-do-i-keep-two-side-by-side-divs-the-same-height
+position        : fixed;
 */
 .sidenav {
   height: 100%;
-  /* 100% Full-height */
-  width: 90px;
   position: fixed;
-  /* Stay in place */
+  width: 270px;
   z-index: 1;
   /* Stay on top */
   top: 0;
   /* Stay at the top */
   left: 0;
-  background-color: #111;
-  /* Black - TO BE CHANGED */
+  background-color: #fff;
   overflow-x: hidden;
   /* Disable horizontal scroll */
-  padding-top: 80px;
+  padding-top: 50px;
   /* Place content 60px from the top */
   text-align: center;
   transition: 0.5s;
@@ -125,8 +123,14 @@ div {
 .form-sub button:hover {
   cursor: pointer; }
 
+#celsiusCard {
+  display: none; }
+
+#kelvinCard {
+  display: none; }
+
 /*	=====Text Divs===== */
-#informationDiv {
+.text-div {
   padding-top: 50px;
   padding-bottom: 25px; }
 

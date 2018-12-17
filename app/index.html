@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Meta -->
+	<!-- Meta -->
 	<title>Gas Mark Converter</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
-<!-- External frameworks & files -->
+
+	<!-- External frameworks & files -->
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="css/styles.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -20,147 +21,170 @@
 <!-- Make a sidebar with temperatures toggling hide and show. Use this for insp: https://github.com/BlackrockDigital/startbootstrap-simple-sidebar -->
 
 <div id="backgroundDiv">
-<nav class="navbar navbar-expand-md">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="#">Gas Mark Converter</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="#">Calculations</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">History</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Resources</a>
-				</li> 
-			</ul>
-		</div>
-	</div>
-</nav>
-
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-lg-2 col-md-2 col-sm-2">
-			<div class="sidenav">
-				<ul>
-					<li id="fahrenheitLi" class="sidenav-button-active"><span class="temp-symbol">°F</span><br>Fahrenheit</li>
-					<li id="celsiusLi"><span class="temp-symbol">°C</span><br>Celsius</li>
-					<li id="kelvinLi"><span class="temp-symbol">K</span><br>Kelvin</li>
+	<nav class="navbar navbar-expand-md">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Gas Mark Converter</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Calculations</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">History</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Resources</a>
+					</li> 
 				</ul>
 			</div>
 		</div>
-		<div class="col-lg-10 col-md-10 col-sm-10">
-			<div style="background:transparent !important" class="jumbotron jumbotron-fluid">
-				<div class="container">
-					<h1>Gas Mark Converter</h1>
+	</nav>
+	<div id="mainDiv" class="container-fluid">
+		<div class="row">
+			<div class="col-lg-2 col-md-2 col-sm-2">
+				<div class="sidenav">
+					<ul>
+						<li class="sidenav-button-active" id="fahrenheitLi"><span class="temp-symbol">°F</span><br>Fahrenheit</li>
+						<li id="celsiusLi"><span class="temp-symbol">°C</span><br>Celsius</li>
+						<li id="kelvinLi"><span class="temp-symbol">K</span><br>Kelvin</li>
+					</ul>
 				</div>
 			</div>
-			<div class="container">
-				<h2>Convert gas mark into other temperature units</h2>
-			</div>
-			<div class="container" id="cardContainer">
-				<div class="row" id="cardFolder">
-					<div class="col-lg-6">
-						<div class="card" id="gasMarkCard">
-							<div class="card-header">
-								<h2>Gas Mark</h2>
-							</div>
-							<div class="card-body">
-								<p id="gasMarkText"></p>
-							</div>
-							<div class="card-footer">
-								<form>
-									<div class='form-group'>
-										<label id='gasMarkLabel' for='gasMarkField'>Input Gas Mark:</label>
-										<input id='gasMarkField' type='text' maxlength='15'></input>
-									</div>
-									<div class='form-sub'>
-										<button id='gasMarkButton' type='button'>Submit</button>
-									</div>
-								</form>
+			<div class="col-lg-10 col-md-10 col-sm-10">
+				<div style="background:transparent !important" class="jumbotron jumbotron-fluid">
+					<div class="container">
+						<h1>Gas Mark Converter</h1>
+					</div>
+				</div>
+				<div class="container">
+					<h2>Convert gas mark into other temperature units</h2>
+				</div>
+				<div class="container" id="cardContainer">
+					<div class="row" id="cardFolder">
+						<div class="col-lg-6">
+							<div class="card" id="gasMarkCard">
+								<div class="card-header">
+									<h2>Gas Mark</h2>
+								</div>
+								<div class="card-body">
+									<p id="gasMarkText"></p>
+								</div>
+								<div class="card-footer">
+									<form>
+										<div class='form-group'>
+											<label id='gasMarkLabel' for='gasMarkField'>Input Gas Mark:</label>
+											<input id='gasMarkField' type='text' maxlength='15'></input>
+										</div>
+										<div class='form-sub'>
+											<button id='gasMarkButton' type='button'>Submit</button>
+										</div>
+									</form>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="card" id="fahrenheitCard">
-							<div class="card-header">
-								<h2>Fahrenheit</h2>
+						<div class="col-lg-6">
+							<div class="card" id="fahrenheitCard">
+								<div class="card-header">
+									<h2>Fahrenheit</h2>
+								</div>
+								<div class="card-body">
+									<p id="fahrenheitText"></p>
+								</div>
+								<div class="card-footer">
+									<form>
+										<div class='form-group'>
+											<label id='fahrenheitLabel' for='fahrenheitField'>Input Fahrenheit:</label>
+											<input id='fahrenheitField' type='text' maxlength='15'></input>
+										</div>
+										<div class='form-sub'>
+											<button id='fahrenheitButton' type='button'>Submit</button>
+										</div>
+									</form>
+								</div>
 							</div>
-							<div class="card-body">
-								<p id="fahrenheitText"></p>
+						</div>				
+						<div class="col-lg-6">
+							<div class="card" id="celsiusCard">
+								<div class="card-header">
+									<h2>Celsius</h2>
+								</div>
+								<div class="card-body">
+									<p id="celsiusText"></p>
+								</div>
+								<div class="card-footer">
+									<form>
+										<div class='form-group'>
+											<label id='celsiusLabel' for='celsiusField'>Input Celsius:</label>
+											<input id='celsiusField' type='text' maxlength='15'></input>
+										</div>
+										<div class='form-sub'>
+											<button id='celsiusButton' type='button'>Submit</button>
+										</div>
+									</form>
+								</div>
 							</div>
-							<div class="card-footer">
-								<form>
-									<div class='form-group'>
-										<label id='fahrenheitLabel' for='fahrenheitField'>Input Fahrenheit:</label>
-										<input id='fahrenheitField' type='text' maxlength='15'></input>
-									</div>
-									<div class='form-sub'>
-										<button id='fahrenheitButton' type='button'>Submit</button>
-									</div>
-								</form>
+						</div>
+						<div class="col-lg-6">
+							<div class="card" id="kelvinCard">
+								<div class="card-header">
+									<h2>Kelvin</h2>
+								</div>
+								<div class="card-body">
+									<p id="kelvinText"></p>
+								</div>
+								<div class="card-footer">
+									<form>
+										<div class='form-group'>
+											<label id='kelvinLabel' for='kelvinField'>Input Kelvin:</label>
+											<input id='kelvinField' type='text' maxlength='15'></input>
+										</div>
+										<div class='form-sub'>
+											<button id='kelvinButton' type='button'>Submit</button>
+										</div>
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>				
-					<div class="col-lg-6">
-						<div class="card" id="celsiusCard">
-							<div class="card-header">
-								<h2>Celsius</h2>
-							</div>
-							<div class="card-body">
-								<p id="celsiusText"></p>
-							</div>
-							<div class="card-footer">
-								<form>
-									<div class='form-group'>
-										<label id='celsiusLabel' for='celsiusField'>Input Celsius:</label>
-										<input id='celsiusField' type='text' maxlength='15'></input>
-									</div>
-									<div class='form-sub'>
-										<button id='celsiusButton' type='button'>Submit</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="card" id="kelvinCard">
-							<div class="card-header">
-								<h2>Kelvin</h2>
-							</div>
-							<div class="card-body">
-								<p id="kelvinText"></p>
-							</div>
-							<div class="card-footer">
-								<form>
-									<div class='form-group'>
-										<label id='kelvinLabel' for='kelvinField'>Input Kelvin:</label>
-										<input id='kelvinField' type='text' maxlength='15'></input>
-									</div>
-									<div class='form-sub'>
-										<button id='kelvinButton' type='button'>Submit</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>				
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
+<div class="container" id="calculationsDiv">
+	<div class="text-div">
+		<h2>Calculations</h2>
+		<p>It should be noted that all values are rounded to the nearest whole number so...</p>
+	</div>
 </div>
 
-<div class="container" id="informationDiv">
-	<h2>Additional Information</h2>
-	<p>It should be noted that all values are rounded to the nearest whole number so...</p>
-	<p>The draft 2003 edition of the Oxford English Dictionary lists the earliest known usage of the concept as being in L. Chatterton's book Modern Cookery published in 1943: "Afternoon tea scones… Time: 20 minutes. Temperature: Gas, Regulo Mark 7". "Regulo" was a type of gas regulator used by a manufacturer of cookers; however, the scale has now become universal, and the word Regulo is rarely used.</p>
-	<p>The term "gas mark" was a subject of the joint BBC/OED production Balderdash & Piffle, in May 2005. The earliest printed evidence of use of "gas mark" (with no other terms between the two words) appears to date from 1958. However, the manufacturers of the "New World" gas ranges in the mid-1930s gave away recipe books for use with their cooker, and the "Regulo" was the gas regulator. The book has no reference to degrees, either in Fahrenheit or (as then) Centigrade. All dishes to be cooked are noted to be at "Regulo Mark X".</p>
+<div class="container" id="historyDiv">
+	<div class="text-div">
+		<h2>History</h2>
+		<p>The draft 2003 edition of the Oxford English Dictionary lists the earliest known usage of the concept as being in L. Chatterton's book Modern Cookery published in 1943: "Afternoon tea scones… Time: 20 minutes. Temperature: Gas, Regulo Mark 7". "Regulo" was a type of gas regulator used by a manufacturer of cookers; however, the scale has now become universal, and the word Regulo is rarely used.
+		<br>The term "gas mark" was a subject of the joint BBC/OED production Balderdash & Piffle, in May 2005. The earliest printed evidence of use of "gas mark" (with no other terms between the two words) appears to date from 1958. However, the manufacturers of the "New World" gas ranges in the mid-1930s gave away recipe books for use with their cooker, and the "Regulo" was the gas regulator. The book has no reference to degrees, either in Fahrenheit or (as then) Centigrade. All dishes to be cooked are noted to be at "Regulo Mark X".</p>
+	</div>
+</div>
+
+<div class="container" id="resoursesDiv">
+	<div class="text-div">
+		<h2>Resources</h2>
+		<div class="row">
+			<div class="col-4">
+				<p>Wiki Gas Mark</p>
+			</div>
+			<div class="col-4">
+				<p>Wiki Oven Conversions</p>
+			</div>
+			<div class="col-4">
+				<p>Random Blog</p>
+			</div>
+		</div>
+	</div>
 </div>
 
 <footer id="footerDiv">
