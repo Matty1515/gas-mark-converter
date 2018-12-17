@@ -17,7 +17,7 @@
   font-family: 'Playfair Display', serif;
   text-transform: uppercase; }
 
-.card h2, .text-div h2, #footerDiv h2 {
+.jumbotron h2, .card h2, .text-div h2, #footerDiv h2 {
   font-family: 'Raleway', sans-serif; }
 
 div {
@@ -49,9 +49,8 @@ div {
 
 /* 	=====Sidenav=====
 -Get rid of sidenav comments
--Change inactive background colour to white
--Make sidenav same height as container https://stackoverflow.com/questions/2997767/how-do-i-keep-two-side-by-side-divs-the-same-height
-position        : fixed;
+-Fit to small screens - @media (max-width: 767.98px) {} and mobile screens - @media (max-width: 575.98px) {}
+-Make sidenav same height as container https://stackoverflow.com/questions/2997767/how-do-i-keep-two-side-by-side-divs-the-same-heigh
 */
 .sidenav {
   height: 100%;
@@ -93,6 +92,25 @@ position        : fixed;
   font-weight: bold;
   font-size: 50px; }
 
+.page-wrapper {
+  margin-left: 270px; }
+
+@media (max-width: 1199.98px) {
+  .sidenav {
+    width: 200px; }
+  .page-wrapper {
+    margin-left: 200px; }
+  .temp-name {
+    font-size: 17px; } }
+
+@media (max-width: 991.98px) {
+  .sidenav {
+    width: 150px; }
+  .page-wrapper {
+    margin-left: 150px; }
+  .temp-name {
+    font-size: 12px; } }
+
 /*    =====Jumbotron===== 
 */
 #backgroundDiv {
@@ -102,6 +120,9 @@ position        : fixed;
 .jumbotron h1 {
   color: #000;
   font-size: 5.063em; }
+
+.jumbotron h2 {
+  margin-top: 25px; }
 
 /*	=====Form Cards=====
 -Form inspo - https://codemyui.com/login-form-visual-cues-invalid-input/ form
