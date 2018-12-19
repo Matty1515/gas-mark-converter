@@ -30,14 +30,14 @@
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="#">Calculations</a>
+						<a class="nav-link" href="#calculationsDiv">Calculations</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">History</a>
+						<a class="nav-link" href="#historyDiv">History</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Resources</a>
-					</li> 
+						<a class="nav-link" href="#resoursesDiv">Resources</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -61,17 +61,17 @@
 				<div class="row" id="cardFolder">
 					<div class="col-xl-6 col-lg-12">
 						<div class="card" id="gasMarkCard">
-							<div class="card-header">
+							<div class="card-header" id="cardHeader">
 								<h2>Gas Mark</h2>
 							</div>
-							<div class="card-body">
+							<div class="card-body" id="cardBody">
 								<p id="gasMarkText"></p>
 							</div>
-							<div class="card-footer">
+							<div class="card-footer" id="cardFooter">
 								<form>
 									<div class='form-group'>
 										<label id='gasMarkLabel' for='gasMarkField'>Input Gas Mark:</label>
-										<input id='gasMarkField' type='text' maxlength='15'></input>
+										<input id='gasMarkField' type='text' maxlength='3'></input>
 									</div>
 									<div class='form-sub'>
 										<button id='gasMarkButton' type='button'>Submit</button>
@@ -82,17 +82,17 @@
 					</div>
 					<div class="col-xl-6 col-lg-12">
 						<div class="card" id="fahrenheitCard">
-							<div class="card-header">
+							<div class="card-header" id="cardHeader">
 								<h2>Fahrenheit</h2>
 							</div>
-							<div class="card-body">
+							<div class="card-body" id="cardBody">
 								<p id="fahrenheitText"></p>
 							</div>
-							<div class="card-footer">
+							<div class="card-footer" id="cardFooter">
 								<form>
 									<div class='form-group'>
 										<label id='fahrenheitLabel' for='fahrenheitField'>Input Fahrenheit:</label>
-										<input id='fahrenheitField' type='text' maxlength='15'></input>
+										<input id='fahrenheitField' type='text' maxlength='3'></input>
 									</div>
 									<div class='form-sub'>
 										<button id='fahrenheitButton' type='button'>Submit</button>
@@ -103,17 +103,17 @@
 					</div>				
 					<div class="col-xl-6 col-lg-12">
 						<div class="card" id="celsiusCard">
-							<div class="card-header">
+							<div class="card-header" id="cardHeader">
 								<h2>Celsius</h2>
 							</div>
-							<div class="card-body">
+							<div class="card-body" id="cardBody">
 								<p id="celsiusText"></p>
 							</div>
-							<div class="card-footer">
+							<div class="card-footer" id="cardFooter">
 								<form>
 									<div class='form-group'>
 										<label id='celsiusLabel' for='celsiusField'>Input Celsius:</label>
-										<input id='celsiusField' type='text' maxlength='15'></input>
+										<input id='celsiusField' type='text' maxlength='3'></input>
 									</div>
 									<div class='form-sub'>
 										<button id='celsiusButton' type='button'>Submit</button>
@@ -124,17 +124,17 @@
 					</div>
 					<div class="col-xl-6 col-lg-12">
 						<div class="card" id="kelvinCard">
-							<div class="card-header">
+							<div class="card-header" id="cardHeader">
 								<h2>Kelvin</h2>
 							</div>
-							<div class="card-body">
+							<div class="card-body" id="cardBody">
 								<p id="kelvinText"></p>
 							</div>
-							<div class="card-footer">
+							<div class="card-footer" id="cardFooter">
 								<form>
 									<div class='form-group'>
 										<label id='kelvinLabel' for='kelvinField'>Input Kelvin:</label>
-										<input id='kelvinField' type='text' maxlength='15'></input>
+										<input id='kelvinField' type='text' maxlength='3'></input>
 									</div>
 									<div class='form-sub'>
 										<button id='kelvinButton' type='button'>Submit</button>
@@ -149,73 +149,78 @@
 	</div>
 </div>
 
-<div class="container" id="calculationsDiv">
-	<div class="text-div">
-		<h2>Calculations</h2>
-		<p>It should be noted that all values are rounded to the nearest whole number so...</p>
-	</div>
-</div>
-
-<div class="container" id="historyDiv">
-	<div class="text-div">
-		<h2>History</h2>
-		<p>The draft 2003 edition of the Oxford English Dictionary lists the earliest known usage of the concept as being in L. Chatterton's book Modern Cookery published in 1943: "Afternoon tea scones… Time: 20 minutes. Temperature: Gas, Regulo Mark 7". "Regulo" was a type of gas regulator used by a manufacturer of cookers; however, the scale has now become universal, and the word Regulo is rarely used.
-		<br>The term "gas mark" was a subject of the joint BBC/OED production Balderdash & Piffle, in May 2005. The earliest printed evidence of use of "gas mark" (with no other terms between the two words) appears to date from 1958. However, the manufacturers of the "New World" gas ranges in the mid-1930s gave away recipe books for use with their cooker, and the "Regulo" was the gas regulator. The book has no reference to degrees, either in Fahrenheit or (as then) Centigrade. All dishes to be cooked are noted to be at "Regulo Mark X".</p>
-	</div>
-</div>
-
-<div class="container" id="resoursesDiv">
-	<div class="text-div">
-		<h2>Resources</h2>
-		<div class="row">
-			<div class="col-4">
-				<p>Wiki Gas Mark</p>
-			</div>
-			<div class="col-4">
-				<p>Wiki Oven Conversions</p>
-			</div>
-			<div class="col-4">
-				<p>Random Blog</p>
+<div class="page-wrapper">
+	<div id="calculationsDiv">
+		<div class="container" id="calculationsDiv">
+			<div class="text-div">
+				<h2>Calculations</h2>
+				<p>It should be noted that all values are rounded to the nearest whole number so...</p>
 			</div>
 		</div>
 	</div>
-</div>
-
-<footer id="footerDiv">
-	<div class="container">
-		<div class="row text-center text-xs-center text-sm-left text-md-left">
-			<div class="col-xs-12 col-sm-4 col-md-4">
-				<h2>Internal Links</h2>
-				<ul>
-					<li class="footer-button">Calculations</li>
-					<li class="footer-button">History</li>
-					<li class="footer-button">Resources</li>
-				</ul>
+	<div id="historyDiv">
+		<div class="container">
+			<div class="text-div">
+				<h2>History</h2>
+				<p>The draft 2003 edition of the Oxford English Dictionary lists the earliest known usage of the concept as being in L. Chatterton's book Modern Cookery published in 1943: "Afternoon tea scones… Time: 20 minutes. Temperature: Gas, Regulo Mark 7". "Regulo" was a type of gas regulator used by a manufacturer of cookers; however, the scale has now become universal, and the word Regulo is rarely used.
+				<br>The term "gas mark" was a subject of the joint BBC/OED production Balderdash & Piffle, in May 2005. The earliest printed evidence of use of "gas mark" (with no other terms between the two words) appears to date from 1958. However, the manufacturers of the "New World" gas ranges in the mid-1930s gave away recipe books for use with their cooker, and the "Regulo" was the gas regulator. The book has no reference to degrees, either in Fahrenheit or (as then) Centigrade. All dishes to be cooked are noted to be at "Regulo Mark X".</p>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-4">
-				<h2>External Resources</h2>
-				<ul>
-					<li class="footer-button">Wiki Gas Mark</li>
-					<li class="footer-button">Wiki Oven Conversions</li>
-					<li class="footer-button">Random Blog</li>
-				</ul>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-4">
-				<h2>External Links</h2>
-				<ul>
-					<li class="footer-button"><i class="fa fa-github"></i> GitHub</li>
-					<li class="footer-button"><i class="fa fa-envelope"></i> Email</li>
-				</ul>
-			</div>
-		</div>
-		<hr>		
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
-				<p>Oven Temperature App</p>
+		</div>	
+	</div>
+	<div id="resoursesDiv">
+		<div class="container" id="resoursesDiv">
+			<div class="text-div">
+				<h2>Resources</h2>
+				<div class="row">
+					<div class="col-4">
+						<p>Wiki Gas Mark</p>
+					</div>
+					<div class="col-4">
+						<p>Wiki Oven Conversions</p>
+					</div>
+					<div class="col-4">
+						<p>Random Blog</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</footer>
+	<footer id="footerDiv">
+		<div class="container">
+			<div class="row text-center text-xs-center text-sm-left text-md-left">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h2>Internal Links</h2>
+					<ul>
+						<li class="footer-button">Calculations</li>
+						<li class="footer-button">History</li>
+						<li class="footer-button">Resources</li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h2>External Resources</h2>
+					<ul>
+						<li class="footer-button">Wiki Gas Mark</li>
+						<li class="footer-button">Wiki Oven Conversions</li>
+						<li class="footer-button">Random Blog</li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h2>External Links</h2>
+					<ul>
+						<li class="footer-button"><i class="fa fa-github"></i> GitHub</li>
+						<li class="footer-button"><i class="fa fa-envelope"></i> Email</li>
+					</ul>
+				</div>
+			</div>
+			<hr>		
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+					<p>Oven Temperature App</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
 
 <footer class="page-footer fixed-bottom" id="javascriptFooter">
 	<div class="container text-center">

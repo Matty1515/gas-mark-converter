@@ -9,10 +9,13 @@
 	7. Text Divs
 	8. Footer
 */
-/*	=====House Style===== */
+/*	=====House Style===== 
+-Add 'scale-' selectors for font sizes from type-scale.com
+-Add 'border-radius-' selectors maybe 2 of them like 10px and 15px or something
+*/
 /* white */
 /* light grey */
-/* black */
+/* dark slate grey */
 .temp-symbol, .jumbotron h1 {
   font-family: 'Playfair Display', serif;
   text-transform: uppercase; }
@@ -41,48 +44,50 @@ div {
   z-index: 2; }
 
 .navbar a {
-  color: #000; }
+  color: #2c2c2c; }
 
 .navbar a:hover {
-  color: #000;
-  background-color: #eae7dc; }
+  color: #2c2c2c; }
+
+.nav-item a:hover {
+  background-color: #e1d8ca;
+  border-radius: 10px; }
 
 /* 	=====Sidenav=====
 -Get rid of sidenav comments
 -Fit to small screens - @media (max-width: 767.98px) {} and mobile screens - @media (max-width: 575.98px) {}
--Make sidenav same height as container https://stackoverflow.com/questions/2997767/how-do-i-keep-two-side-by-side-divs-the-same-heigh
+-Make sidenav same height as container https://stackoverflow.com/questions/2997767/how-do-i-keep-two-side-by-side-divs-the-same-heigh 
+https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp
 */
 .sidenav {
   height: 100%;
   position: fixed;
-  width: 270px;
-  z-index: 1;
-  /* Stay on top */
+  width: 200px;
   top: 0;
-  /* Stay at the top */
   left: 0;
   background-color: #fff;
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
-  padding-top: 50px;
-  /* Place content 60px from the top */
+  padding-top: 80px;
   text-align: center;
-  transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidenav */ }
+  overflow-x: hidden;
+  /* Disables horizontal scroll */
+  z-index: 1;
+  /* Stays above page-wrapper but not navbar */
+  transition: 0.5s; }
 
 .sidenav li {
   list-style-type: none;
   padding: 5px;
   margin-right: 40px;
-  transition: 0.5s; }
+  transition: 0.5s;
+  margin-bottom: 5px; }
 
 .sidenav li:hover {
-  background-color: #eae7dc;
+  background-color: #e1d8ca;
   cursor: pointer;
   transform: scale(1.05); }
 
 .sidenav-button-active {
-  background-color: #eae7dc; }
+  background-color: #e1d8ca; }
 
 .sidenav-active {
   background-color: #fff;
@@ -93,7 +98,7 @@ div {
   font-size: 50px; }
 
 .page-wrapper {
-  margin-left: 270px; }
+  margin-left: 200px; }
 
 @media (max-width: 1199.98px) {
   .sidenav {
@@ -111,14 +116,22 @@ div {
   .temp-name {
     font-size: 12px; } }
 
+.sidenav-closed {
+  width: 0px; }
+
+.page-wrapper-closed {
+  margin-left: 0px; }
+
 /*    =====Jumbotron===== 
+-Find a suitable image
 */
 #backgroundDiv {
-  background-color: #eae7dc;
-  padding-bottom: 50px; }
+  background-color: #e1d8ca;
+  padding-bottom: 50px;
+  background-image: url("../img/temperature-background.jpg"); }
 
 .jumbotron h1 {
-  color: #000;
+  color: #2c2c2c;
   font-size: 5.063em; }
 
 .jumbotron h2 {
@@ -144,6 +157,9 @@ div {
 .form-sub button:hover {
   cursor: pointer; }
 
+#cardFooter {
+  background-color: #fff; }
+
 #celsiusCard {
   display: none; }
 
@@ -153,13 +169,17 @@ div {
 /*	=====Text Divs===== */
 .text-div {
   padding-top: 50px;
-  padding-bottom: 25px; }
+  padding-bottom: 25px;
+  line-height: 1.9; }
+
+#historyDiv {
+  background-color: #e1d8ca; }
 
 /*	=====Footer=====
 -Get rid of JavaScript footer when done
 */
 #footerDiv {
-  background-color: #eae7dc;
+  background-color: #e1d8ca;
   padding-top: 50px;
   padding-bottom: 25px; }
 
@@ -173,4 +193,4 @@ div {
 #javascriptFooter {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
   padding-top: 10px;
-  color: #eae7dc; }
+  color: #e1d8ca; }

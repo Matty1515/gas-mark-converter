@@ -10,20 +10,23 @@
 	8. Footer
 */
 
-/*	=====House Style===== */
+/*	=====House Style===== 
+-Add 'scale-' selectors for font sizes from type-scale.com
+-Add 'border-radius-' selectors maybe 2 of them like 10px and 15px or something
+*/
 
-$colour-primary: #fff; /* white */
-$colour-secondary: #eae7dc; /* light grey */
-$colour-text: #000; /* black */
+$colour-primary  : #fff; /* white */
+$colour-secondary: #e1d8ca; /* light grey */
+$colour-text     : #2c2c2c; /* dark slate grey */
 
 $transition-speed: 0.5s;
 $transition-scale: scale(1.05);
 
-$shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$shadow      : 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 $shadow-hover: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 
 %font-header {
-	font-family: 'Playfair Display', serif;
+	font-family   : 'Playfair Display', serif;
 	text-transform: uppercase;
 }
 %font-subheader {
@@ -58,33 +61,37 @@ div {
 }
 .navbar a:hover {
 	color: $colour-text;
-	background-color: $colour-secondary;
 }
-
+.nav-item a:hover {
+	background-color: $colour-secondary;
+	border-radius   : 10px;
+}
 
 /* 	=====Sidenav=====
 -Get rid of sidenav comments
 -Fit to small screens - @media (max-width: 767.98px) {} and mobile screens - @media (max-width: 575.98px) {}
--Make sidenav same height as container https://stackoverflow.com/questions/2997767/how-do-i-keep-two-side-by-side-divs-the-same-heigh
+-Make sidenav same height as container https://stackoverflow.com/questions/2997767/how-do-i-keep-two-side-by-side-divs-the-same-heigh 
+https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp
 */
 .sidenav {
 	height          : 100%;
 	position        : fixed;
-	width           : 270px;
-	z-index         : 1; /* Stay on top */
-	top             : 0; /* Stay at the top */
+	width           : 200px;
+	top             : 0;
 	left            : 0;
 	background-color: $colour-primary;
-	overflow-x      : hidden; /* Disable horizontal scroll */
-	padding-top     : 50px; /* Place content 60px from the top */
+	padding-top     : 80px;
 	text-align      : center;
-	transition      : $transition-speed; /* 0.5 second transition effect to slide in the sidenav */
+	overflow-x      : hidden; /* Disables horizontal scroll */
+	z-index         : 1; /* Stays above page-wrapper but not navbar */
+	transition      : $transition-speed;
 }
 .sidenav li {
 	list-style-type: none;
 	padding        : 5px;
 	margin-right   : 40px;
 	transition     : $transition-speed;
+	margin-bottom  : 5px;
 }
 .sidenav li:hover {
 	background-color: $colour-secondary;
@@ -104,7 +111,7 @@ div {
 	font-size  : 50px;
 }
 .page-wrapper {
-	margin-left: 270px;
+	margin-left: 200px;
 }
 @media (max-width: 1199.98px) {
     .sidenav {
@@ -128,16 +135,25 @@ div {
 		font-size: 12px;
 	}
 }
+// Keep this below the media queries or else it won't work properly
+.sidenav-closed {
+	width: 0px;
+}
+.page-wrapper-closed {
+	margin-left: 0px;
+}
 
 /*    =====Jumbotron===== 
+-Find a suitable image
 */
 #backgroundDiv {
 	background-color: $colour-secondary;
-	padding-bottom: 50px;
+	padding-bottom  : 50px;
+	background-image: url("../img/temperature-background.jpg");
 }
 .jumbotron h1 {
 	@extend %font-header;
-	color: $colour-text;
+	color    : $colour-text;
 	font-size: 5.063em;
 }
 .jumbotron h2 {
@@ -150,23 +166,26 @@ div {
 */
 .card {
 	box-shadow: $shadow;
-	margin: 20px;
-	width: 450px;
+	margin    : 20px;
+	width     : 450px;
 	transition: $transition-speed;
 }
 .card:hover {
 	box-shadow: $shadow-hover;
-	transform: $transition-scale;
+	transform : $transition-scale;
 }
 .card h2 {
 	@extend %font-subheader;
 }
 .card-body p {
-	font-size: 2em;
+	font-size  : 2em;
 	font-weight: bold;
 }
 .form-sub button:hover {
 	cursor: pointer;
+}
+#cardFooter {
+	background-color: $colour-primary;
 }
 #celsiusCard {
 	display: none;
@@ -178,11 +197,15 @@ div {
 /*	=====Text Divs===== */
 
 .text-div {
-	padding-top: 50px;
+	padding-top   : 50px;
 	padding-bottom: 25px;
+	line-height: 1.9;
 }
 .text-div h2 {
 	@extend %font-subheader;
+}
+#historyDiv {
+	background-color: $colour-secondary;
 }
 
 /*	=====Footer=====
@@ -191,8 +214,8 @@ div {
 
 #footerDiv {
 	background-color: $colour-secondary;
-	padding-top: 50px;
-	padding-bottom: 25px;
+	padding-top     : 50px;
+	padding-bottom  : 25px;
 }
 #footerDiv h2 {
 	@extend %font-subheader;
@@ -202,10 +225,10 @@ div {
 }
 .footer-button:hover {
 	transform: $transition-scale;
-	cursor: pointer;
+	cursor   : pointer;
 }
 #javascriptFooter {
 	background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
-	padding-top: 10px;
-	color: $colour-secondary;
+	padding-top     : 10px;
+	color           : $colour-secondary;
 }

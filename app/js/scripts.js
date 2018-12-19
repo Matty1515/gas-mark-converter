@@ -13,6 +13,22 @@ $('.sidenav').on('mouseenter', () => {
 	$('.sidenav').removeClass('sidenav-active');
 });
 
+// Colapses the sidenav after it has been scrolled past
+// Change sidenav css width to addclass so it can be removed and go back tp normal
+window.onscroll = function() {
+	scrollSidenav();
+};
+function scrollSidenav() {
+  	if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 500) {
+  		$('.sidenav').fadeOut('fast');
+  		$('.sidenav').addClass('sidenav-closed');
+    	$('.page-wrapper').addClass('page-wrapper-closed');
+  	} else if (document.body.scrollTop < 700 || document.documentElement.scrollTop < 500) {
+  		$('.sidenav').fadeIn('fast').removeClass('sidenav-closed');
+  		$('.page-wrapper').removeClass('page-wrapper-closed');
+  	}
+}
+
 // Fades out and in the temperature cards when clicked in the sidenav
 $('#fahrenheitLi').on('click', () => {
 	$('#fahrenheitCard').fadeToggle('slow');
