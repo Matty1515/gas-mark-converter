@@ -8,14 +8,11 @@
 	6. Form Cards
 	7. Text Divs
 	8. Footer
+	9. Media Queries
 */
-/*	=====House Style===== 
--Add 'scale-' selectors for font sizes from type-scale.com
+/*	=====House Style=====
 -Add 'border-radius-' selectors maybe 2 of them like 10px and 15px or something
 */
-/* white */
-/* light grey */
-/* dark slate grey */
 .temp-symbol, .jumbotron h1 {
   font-family: 'Playfair Display', serif;
   text-transform: uppercase; }
@@ -26,7 +23,6 @@
 div {
   font-family: 'Raleway', sans-serif; }
 
-/*	=====Global Styles===== */
 div {
   font-size: 18px;
   line-height: 1.7; }
@@ -35,8 +31,7 @@ div {
   box-sizing: border-box; }
 
 /* 	=====Navbar===== 
--Change color of the toggler icon
--Make a:hover background color fit the whole space 
+-Change color of the toggler icon and <hr> line break so they appear
 */
 .navbar {
   background-color: #fff;
@@ -53,11 +48,11 @@ div {
   background-color: #e1d8ca;
   border-radius: 10px; }
 
+.nav-hide {
+  display: none; }
+
 /* 	=====Sidenav=====
--Get rid of sidenav comments
 -Fit to small screens - @media (max-width: 767.98px) {} and mobile screens - @media (max-width: 575.98px) {}
--Make sidenav same height as container https://stackoverflow.com/questions/2997767/how-do-i-keep-two-side-by-side-divs-the-same-heigh 
-https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp
 */
 .sidenav {
   height: 100%;
@@ -69,9 +64,7 @@ https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp
   padding-top: 80px;
   text-align: center;
   overflow-x: hidden;
-  /* Disables horizontal scroll */
   z-index: 1;
-  /* Stays above page-wrapper but not navbar */
   transition: 0.5s; }
 
 .sidenav li {
@@ -98,29 +91,8 @@ https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp
   font-size: 50px; }
 
 .page-wrapper {
-  margin-left: 200px; }
-
-@media (max-width: 1199.98px) {
-  .sidenav {
-    width: 200px; }
-  .page-wrapper {
-    margin-left: 200px; }
-  .temp-name {
-    font-size: 17px; } }
-
-@media (max-width: 991.98px) {
-  .sidenav {
-    width: 150px; }
-  .page-wrapper {
-    margin-left: 150px; }
-  .temp-name {
-    font-size: 12px; } }
-
-.sidenav-closed {
-  width: 0px; }
-
-.page-wrapper-closed {
-  margin-left: 0px; }
+  margin-left: 200px;
+  transition: 0.5s; }
 
 /*    =====Jumbotron===== 
 -Find a suitable image
@@ -132,7 +104,7 @@ https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp
 
 .jumbotron h1 {
   color: #2c2c2c;
-  font-size: 5.063em; }
+  font-size: 91.134px; }
 
 .jumbotron h2 {
   margin-top: 25px; }
@@ -151,7 +123,7 @@ https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp
   transform: scale(1.05); }
 
 .card-body p {
-  font-size: 2em;
+  font-size: 40.5px;
   font-weight: bold; }
 
 .form-sub button:hover {
@@ -194,3 +166,41 @@ https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
   padding-top: 10px;
   color: #e1d8ca; }
+
+@media (max-width: 1199.98px) {
+  .sidenav {
+    width: 175px; }
+  .page-wrapper {
+    margin-left: 175px; } }
+
+@media (max-width: 991.98px) {
+  .sidenav {
+    width: 150px; }
+  .page-wrapper {
+    margin-left: 150px; }
+  .temp-name {
+    font-size: 12.006px; } }
+
+@media (max-width: 767.98px) {
+  .jumbotron h1 {
+    font-size: 85px; }
+  .sidenav {
+    width: 0px; }
+  .page-wrapper {
+    margin-left: 0px; }
+  .nav-item {
+    margin-bottom: 5px; }
+  .nav-hide {
+    display: inline; } }
+
+@media (max-width: 575.98px) {
+  .jumbotron h1 {
+    font-size: 60.075px; }
+  .card {
+    width: 350px; } }
+
+.sidenav-closed {
+  width: 0px; }
+
+.page-wrapper-closed {
+  margin-left: 0px; }

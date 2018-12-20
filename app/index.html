@@ -29,6 +29,17 @@
 			</button>
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="navbar-nav ml-auto">
+					<li class="nav-item nav-hide">
+						<!-- Change F symbol to a little symbol thingy with a grey, round background -->
+						<a class="nav-link sidenav-button-active fahrenheitLi">°F Fahrenheit</a>
+					</li>
+					<li class="nav-item nav-hide">
+						<a class="nav-link celsiusLi">°C Celsius</a>
+					</li>
+					<li class="nav-item nav-hide">
+						<a class="nav-link kelvinLi">K Kelvin</a>
+					</li>
+					<hr>
 					<li class="nav-item">
 						<a class="nav-link" href="#calculationsDiv">Calculations</a>
 					</li>
@@ -45,9 +56,9 @@
 	<div id="mainDiv">
 		<div class="sidenav">
 			<ul>
-				<li class="sidenav-button-active" id="fahrenheitLi"><span class="temp-symbol">°F</span><br><span class="temp-name">Fahrenheit</span></li>
-				<li id="celsiusLi"><span class="temp-symbol">°C</span><br><span class="temp-name">Celsius</span></li>
-				<li id="kelvinLi"><span class="temp-symbol">K</span><br><span class="temp-name">Kelvin</span></li>
+				<li class="sidenav-button-active fahrenheitLi"><span class="temp-symbol">°F</span><br><span class="temp-name">Fahrenheit</span></li>
+				<li class="celsiusLi"><span class="temp-symbol">°C</span><br><span class="temp-name">Celsius</span></li>
+				<li class="kelvinLi"><span class="temp-symbol">K</span><br><span class="temp-name">Kelvin</span></li>
 			</ul>
 		</div>
 		<div class="page-wrapper">

@@ -30,17 +30,17 @@ function scrollSidenav() {
 }
 
 // Fades out and in the temperature cards when clicked in the sidenav
-$('#fahrenheitLi').on('click', () => {
+$('.fahrenheitLi').on('click', () => {
 	$('#fahrenheitCard').fadeToggle('slow');
-	$('#fahrenheitLi').toggleClass('sidenav-button-active');
+	$('.fahrenheitLi').toggleClass('sidenav-button-active');
 });
-$('#celsiusLi').on('click', () => {
+$('.celsiusLi').on('click', () => {
 	$('#celsiusCard').fadeToggle('slow');
-	$('#celsiusLi').toggleClass('sidenav-button-active');
+	$('.celsiusLi').toggleClass('sidenav-button-active');
 });
-$('#kelvinLi').on('click', () => {
+$('.kelvinLi').on('click', () => {
 	$('#kelvinCard').fadeToggle('slow');
-	$('#kelvinLi').toggleClass('sidenav-button-active');
+	$('.kelvinLi').toggleClass('sidenav-button-active');
 });
 
 
