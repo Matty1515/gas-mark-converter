@@ -14,10 +14,10 @@
 /*	=====House Style=====
 -Add 'border-radius-' selectors maybe 2 of them like 10px and 15px or something
 */
-
+// Chrome / grey colour scheme
 $colour-primary  : #fff; // white
 $colour-secondary: #e1d8ca; // light grey
-$colour-text     : #2c2c2c; // dark slate grey
+$colour-text     : #343a40; // dark slate grey
 
 // Follows the 'Perfect Fifth' text scale
 $font-size-xxl: 91.134px;
@@ -29,6 +29,9 @@ $font-size-sm: 12.006px;
 
 $transition-speed: 0.5s;
 $transition-scale: scale(1.05);
+
+$border-radius-1: 5px;
+$border-radius-2: 10px;
 
 $shadow      : 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 $shadow-hover: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
@@ -70,7 +73,7 @@ div {
 }
 .nav-item a:hover {
 	background-color: $colour-secondary;
-	border-radius   : 10px;
+	border-radius   : $border-radius-1;
 }
 .nav-hide {
 	display: none;
@@ -101,11 +104,13 @@ div {
 }
 .sidenav li:hover {
 	background-color: $colour-secondary;
+	border-radius   : $border-radius-1;
 	cursor          : pointer;
 	transform       : $transition-scale;
 }
 .sidenav-button-active {
 	background-color: $colour-secondary;
+	border-radius   : $border-radius-1;
 }
 .sidenav-active {
 	background-color: $colour-primary;
@@ -156,6 +161,7 @@ div {
 	@extend %font-subheader;
 }
 .card-body p {
+	@extend %font-header;
 	font-size  : $font-size-lg;
 	font-weight: bold;
 }
@@ -165,11 +171,22 @@ div {
 #cardFooter {
 	background-color: $colour-primary;
 }
-#celsiusCard {
-	display: none;
+#gasMarkCard, #fahrenheitCard {
+	border-radius: $border-radius-1;
 }
-#kelvinCard {
+#celsiusCard, #kelvinCard {
 	display: none;
+	border-radius: $border-radius-1;
+}
+#gasMarkField, #fahrenheitField, #celsiusField, #kelvinField {
+	border-radius: $border-radius-1;
+}
+#gasMarkButton, #fahrenheitButton, #celsiusButton, #kelvinButton {
+	border-radius: $border-radius-2;
+	box-shadow: $shadow;
+}
+#gasMarkButton:hover, #fahrenheitButton:hover, #celsiusButton:hover, #kelvinButton:hover {
+	box-shadow      : none;
 }
 
 /*	=====Text Divs===== */
@@ -181,6 +198,7 @@ div {
 }
 .text-div h2 {
 	@extend %font-subheader;
+	line-height: 2.1;
 }
 #historyDiv {
 	background-color: $colour-secondary;
@@ -254,6 +272,9 @@ div {
 	}
 	.card {
 		width: 350px;
+	}
+	#footerDiv ul {
+		list-style-type: none;
 	}
 }
 // Keep this below the media queries otherwise it will override it

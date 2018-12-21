@@ -13,7 +13,7 @@
 /*	=====House Style=====
 -Add 'border-radius-' selectors maybe 2 of them like 10px and 15px or something
 */
-.temp-symbol, .jumbotron h1 {
+.temp-symbol, .jumbotron h1, .card-body p {
   font-family: 'Playfair Display', serif;
   text-transform: uppercase; }
 
@@ -39,14 +39,14 @@ div {
   z-index: 2; }
 
 .navbar a {
-  color: #2c2c2c; }
+  color: #343a40; }
 
 .navbar a:hover {
-  color: #2c2c2c; }
+  color: #343a40; }
 
 .nav-item a:hover {
   background-color: #e1d8ca;
-  border-radius: 10px; }
+  border-radius: 5px; }
 
 .nav-hide {
   display: none; }
@@ -76,11 +76,13 @@ div {
 
 .sidenav li:hover {
   background-color: #e1d8ca;
+  border-radius: 5px;
   cursor: pointer;
   transform: scale(1.05); }
 
 .sidenav-button-active {
-  background-color: #e1d8ca; }
+  background-color: #e1d8ca;
+  border-radius: 5px; }
 
 .sidenav-active {
   background-color: #fff;
@@ -103,7 +105,7 @@ div {
   background-image: url("../img/temperature-background.jpg"); }
 
 .jumbotron h1 {
-  color: #2c2c2c;
+  color: #343a40;
   font-size: 91.134px; }
 
 .jumbotron h2 {
@@ -132,17 +134,31 @@ div {
 #cardFooter {
   background-color: #fff; }
 
-#celsiusCard {
-  display: none; }
+#gasMarkCard, #fahrenheitCard {
+  border-radius: 5px; }
 
-#kelvinCard {
-  display: none; }
+#celsiusCard, #kelvinCard {
+  display: none;
+  border-radius: 5px; }
+
+#gasMarkField, #fahrenheitField, #celsiusField, #kelvinField {
+  border-radius: 5px; }
+
+#gasMarkButton, #fahrenheitButton, #celsiusButton, #kelvinButton {
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+
+#gasMarkButton:hover, #fahrenheitButton:hover, #celsiusButton:hover, #kelvinButton:hover {
+  box-shadow: none; }
 
 /*	=====Text Divs===== */
 .text-div {
   padding-top: 50px;
   padding-bottom: 25px;
   line-height: 1.9; }
+
+.text-div h2 {
+  line-height: 2.1; }
 
 #historyDiv {
   background-color: #e1d8ca; }
@@ -197,7 +213,9 @@ div {
   .jumbotron h1 {
     font-size: 60.075px; }
   .card {
-    width: 350px; } }
+    width: 350px; }
+  #footerDiv ul {
+    list-style-type: none; } }
 
 .sidenav-closed {
   width: 0px; }

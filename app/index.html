@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<!-- Make a sidebar with temperatures toggling hide and show. Use this for insp: https://github.com/BlackrockDigital/startbootstrap-simple-sidebar -->
+<!-- Fill out content for the site and add jumbotron image -->
 
 <div id="backgroundDiv">
 	<nav class="navbar navbar-expand-md">
@@ -30,14 +30,13 @@
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item nav-hide">
-						<!-- Change F symbol to a little symbol thingy with a grey, round background -->
-						<a class="nav-link sidenav-button-active fahrenheitLi">°F Fahrenheit</a>
+						<a class="nav-link sidenav-button-active fahrenheitLi"><span class="badge badge-dark">°F</span> Fahrenheit</a>
 					</li>
 					<li class="nav-item nav-hide">
-						<a class="nav-link celsiusLi">°C Celsius</a>
+						<a class="nav-link celsiusLi"><span class="badge badge-dark">°C</span> Celsius</a>
 					</li>
 					<li class="nav-item nav-hide">
-						<a class="nav-link kelvinLi">K Kelvin</a>
+						<a class="nav-link kelvinLi"><span class="badge badge-dark">K</span> Kelvin</a>
 					</li>
 					<hr>
 					<li class="nav-item">
@@ -85,7 +84,7 @@
 										<input id='gasMarkField' type='text' maxlength='3'></input>
 									</div>
 									<div class='form-sub'>
-										<button id='gasMarkButton' type='button'>Submit</button>
+										<button id='gasMarkButton' class='btn btn-dark' type='button'>Submit</button>
 									</div>
 								</form>
 							</div>
@@ -106,7 +105,7 @@
 										<input id='fahrenheitField' type='text' maxlength='3'></input>
 									</div>
 									<div class='form-sub'>
-										<button id='fahrenheitButton' type='button'>Submit</button>
+										<button id='fahrenheitButton' class='btn btn-dark' type='button'>Submit</button>
 									</div>
 								</form>
 							</div>
@@ -127,7 +126,7 @@
 										<input id='celsiusField' type='text' maxlength='3'></input>
 									</div>
 									<div class='form-sub'>
-										<button id='celsiusButton' type='button'>Submit</button>
+										<button id='celsiusButton' class='btn btn-dark' type='button'>Submit</button>
 									</div>
 								</form>
 							</div>
@@ -148,7 +147,7 @@
 										<input id='kelvinField' type='text' maxlength='3'></input>
 									</div>
 									<div class='form-sub'>
-										<button id='kelvinButton' type='button'>Submit</button>
+										<button id='kelvinButton' class='btn btn-dark' type='button'>Submit</button>
 									</div>
 								</form>
 							</div>
