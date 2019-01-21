@@ -14,7 +14,6 @@ $('.sidenav').on('mouseenter', () => {
 });
 
 // Colapses the sidenav after it has been scrolled past
-// Change sidenav css width to addclass so it can be removed and go back tp normal
 window.onscroll = function() {
 	scrollSidenav();
 };
@@ -53,6 +52,10 @@ const printGasMark = document.getElementById("gasMarkText");
 
 // Prints the temperature values
 function printTemperatures(kelvin, celsius, fahrenheit, gasMark) {
+	document.getElementById("gasMarkField").value = "";
+	document.getElementById("kelvinField").value = "";
+	document.getElementById("celsiusField").value = "";
+	document.getElementById("fahrenheitField").value = "";
 	printKelvin.innerHTML = kelvin + "K";
 	printCelsius.innerHTML = celsius + "°C";
 	printFahrenheit.innerHTML = fahrenheit + "°F";
