@@ -21,7 +21,7 @@
 <!-- Fill out content for the site and add jumbotron image -->
 
 <div id="backgroundDiv">
-	<nav class="navbar navbar-expand-md">
+	<nav class="navbar navbar-expand-md navbar-light">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Gas Mark Converter</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -29,23 +29,23 @@
 			</button>
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item nav-hide">
+					<li class="nav-item nav-hide" id="navbar-item">
 						<a class="nav-link sidenav-button-active fahrenheitLi"><span class="badge badge-dark">°F</span> Fahrenheit</a>
 					</li>
-					<li class="nav-item nav-hide">
+					<li class="nav-item nav-hide" id="navbar-item">
 						<a class="nav-link celsiusLi"><span class="badge badge-dark">°C</span> Celsius</a>
 					</li>
-					<li class="nav-item nav-hide">
+					<li class="nav-item nav-hide" id="navbar-item">
 						<a class="nav-link kelvinLi"><span class="badge badge-dark">K</span> Kelvin</a>
 					</li>
 					<hr>
-					<li class="nav-item">
+					<li class="nav-item" id="navbar-item">
 						<a class="nav-link" href="#calculationsDiv">Calculations</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item" id="navbar-item">
 						<a class="nav-link" href="#historyDiv">History</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item" id="navbar-item">
 						<a class="nav-link" href="#resoursesDiv">Resources</a>
 					</li>
 				</ul>
@@ -201,9 +201,9 @@
 				<div class="col-xs-12 col-sm-4 col-md-4">
 					<h2>Internal Links</h2>
 					<ul>
-						<li class="footer-button">Calculations</li>
-						<li class="footer-button">History</li>
-						<li class="footer-button">Resources</li>
+						<li class="footer-button"><a href="#calculationsDiv">Calculations</a></li>
+						<li class="footer-button"><a href="#historyDiv">History</a></li>
+						<li class="footer-button"><a href="#resourcesDiv">Resources</a></li>
 					</ul>
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
@@ -217,8 +217,8 @@
 				<div class="col-xs-12 col-sm-4 col-md-4">
 					<h2>External Links</h2>
 					<ul>
-						<li class="footer-button"><i class="fa fa-github"></i> GitHub</li>
-						<li class="footer-button"><i class="fa fa-envelope"></i> Email</li>
+						<li class="footer-button"><a href="https://github.com/Matty1515/gas-mark-converter" target="_blank"><i class="fa fa-github"></i> GitHub</a></li>
+						<li class="footer-button"><a href="mailto:imhullu15@gmail.com?Subject=Gas%20Mark%20Converter" target="_top"><i class="fa fa-envelope"></i> Email</a></li>
 					</ul>
 				</div>
 			</div>

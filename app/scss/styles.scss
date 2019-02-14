@@ -53,6 +53,9 @@ div {
 	font-size  : 18px;
 	line-height: 1.7;
 }
+html {
+	scroll-behavior: smooth;
+}
 * {
 	box-sizing: border-box;
 }
@@ -66,6 +69,9 @@ div {
 	z-index         : 2;
 }
 .navbar a {
+	color: $colour-text;
+}
+#navbar-item a {
 	color: $colour-text;
 }
 .navbar a:hover {
@@ -222,6 +228,13 @@ div {
 .footer-button:hover {
 	transform: $transition-scale;
 	cursor   : pointer;
+}
+.footer-button a {
+    color: black;
+}
+.footer-button a:hover {
+    color: black;
+    text-decoration: none;
 }
 #javascriptFooter {
 	background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
