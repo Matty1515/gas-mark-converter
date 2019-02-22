@@ -1,8 +1,5 @@
 /* jshint esversion: 6 */
 $(document).ready(() => {
-// Simple getElementById test to see if JavaScript has stopped working
-document.getElementById('testTest').innerHTML = "JavaScript is working!";
-
 
 // ==========jQuery Animations==========
 
@@ -81,11 +78,11 @@ function kelvinFunction() {
 	
 	// Converts Celsius into Gas Mark
 	let gasMark = (celsius - 121) / 14;
-	gasMark = Math.floor(gasMark);
+	gasMark = Math.round(gasMark);
 
 	// Converts Celsius into Fahrenheit
 	let fahrenheit = celsius * (9 / 5) + 32;
-	fahrenheit = Math.floor(fahrenheit);
+	fahrenheit = Math.round(fahrenheit);
 	
 	printTemperatures(kelvin, celsius, fahrenheit, gasMark);
 }
@@ -99,14 +96,14 @@ function celsiusFunction() {
 	
 	// Converts Celsius into Gas Mark
 	let gasMark = (celsius - 121) / 14;
-	gasMark = Math.floor(gasMark);
+	gasMark = Math.round(gasMark);
 	
 	// Converts Celsius into Kelvin
 	const kelvin = (celsius / 1) + 273;
 
 	// Converts Celsius into Fahrenheit
 	let fahrenheit = celsius * (9 / 5) + 32;
-	fahrenheit = Math.floor(fahrenheit);
+	fahrenheit = Math.round(fahrenheit);
 	
 	printTemperatures(kelvin, celsius, fahrenheit, gasMark);
 }
@@ -140,15 +137,15 @@ function gasMarkFunction() {
 	
 	// Converts Gas Mark into Celsius
 	let celsiusRaw = (gasMark * 14) + 121;
-	let celsius = Math.floor(celsiusRaw);
+	let celsius = Math.round(celsiusRaw);
 	
 	// Converts Celsius into Kelvin
 	let kelvin = (celsiusRaw / 1) + 273;
-	kelvin = Math.floor(kelvin);
+	kelvin = Math.round(kelvin);
 
 	// Converts Celsius into Fahrenheit
 	let fahrenheit = celsiusRaw * (9 / 5) + 32;
-	fahrenheit = Math.floor(fahrenheit);
+	fahrenheit = Math.round(fahrenheit);
 	
 	// Gas Mark can have values of 1/2 and 1/4. These are not properly converted by the formula so they are converted in an if, else statement.
 	if (gasMark === "1/2") {
@@ -167,7 +164,7 @@ function gasMarkFunction() {
 const gasMarkButton = document.getElementById('gasMarkButton');
 gasMarkButton.addEventListener('click', gasMarkFunction, false);
 
-// Look into rounding errors from math.floor when using Fahrenheit
+// Gas Mark appears to be one out on higher values - rounding error? does it even matter if rough values are used?
 // Stop inputs that are not numbers
 // Use Number.isInteger(); to make sure it is a whole number
 

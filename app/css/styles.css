@@ -191,11 +191,6 @@ html {
   color: black;
   text-decoration: none; }
 
-#javascriptFooter {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
-  padding-top: 10px;
-  color: #e1d8ca; }
-
 @media (max-width: 1199.98px) {
   .sidenav {
     width: 175px; }
