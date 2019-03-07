@@ -1,4 +1,4 @@
-/* 	=====Stylesheet Order=====
+/* 	=====Stylesheet Order===== 
 	
 	1. House Style
 	2. Global Styles 
@@ -104,11 +104,13 @@ html {
 
 /*    =====Jumbotron===== 
 -Find a suitable image
+url("../img/temperature-background.jpg");
 */
 #backgroundDiv {
   background-color: #e1d8ca;
   padding-bottom: 50px;
-  background-image: url("../img/temperature-background.jpg"); }
+  background-image: url("../img/background1-large.jpg");
+  background-size: cover; }
 
 .jumbotron h1 {
   color: #343a40;
