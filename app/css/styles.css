@@ -1,4 +1,4 @@
-/* 	=====Stylesheet Order===== 
+/* 	=====Stylesheet Order=====
 	
 	1. House Style
 	2. Global Styles 
@@ -51,7 +51,7 @@ html {
   color: #343a40; }
 
 .nav-item a:hover {
-  background-color: #e1d8ca;
+  background-color: #cecbc5;
   border-radius: 5px; }
 
 .nav-hide {
@@ -81,13 +81,13 @@ html {
   margin-bottom: 5px; }
 
 .sidenav li:hover {
-  background-color: #e1d8ca;
+  background-color: #cecbc5;
   border-radius: 5px;
   cursor: pointer;
   transform: scale(1.05); }
 
 .sidenav-button-active {
-  background-color: #e1d8ca;
+  background-color: #cecbc5;
   border-radius: 5px; }
 
 .sidenav-active {
@@ -107,7 +107,7 @@ html {
 url("../img/temperature-background.jpg");
 */
 #backgroundDiv {
-  background-color: #e1d8ca;
+  background-color: #cecbc5;
   padding-bottom: 50px;
   background-image: url("../img/background1-large.jpg");
   background-size: cover; }
@@ -169,13 +169,28 @@ url("../img/temperature-background.jpg");
   line-height: 2.1; }
 
 #historyDiv {
-  background-color: #e1d8ca; }
+  background-color: #cecbc5; }
+
+#resoursesDiv .row {
+  text-align: center; }
+
+.resources-item i {
+  font-size: 91.134px;
+  padding: 15px;
+  color: #343a40;
+  transition: 0.5s; }
+
+.resources-item i:hover {
+  background-color: #cecbc5;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: scale(1.05); }
 
 /*	=====Footer=====
 -Get rid of JavaScript footer when done
 */
 #footerDiv {
-  background-color: #e1d8ca;
+  background-color: #cecbc5;
   padding-top: 50px;
   padding-bottom: 25px; }
 
