@@ -16,7 +16,7 @@
 */
 // Chrome / grey colour scheme
 $colour-primary  : #fff; // white
-$colour-secondary: #cecbc5; // light grey
+$colour-secondary: #ebeded; // light grey
 $colour-text     : #343a40; // dark slate grey
 
 // Follows the 'Perfect Fifth' text scale
@@ -139,7 +139,7 @@ url("../img/temperature-background.jpg");
 #backgroundDiv {
 	background-color: $colour-secondary;
 	padding-bottom  : 50px;
-	background-image: url("../img/background1-large.jpg");
+	background-image: url("../img/background4.jpg");
 	background-size : cover;
 }
 .jumbotron h1 {
@@ -292,6 +292,9 @@ url("../img/temperature-background.jpg");
 	}
 }
 @media (max-width: 575.98px) {
+	#backgroundDiv {
+		background-position: right top;
+	}
 	.jumbotron h1 {
 		font-size: $font-size-xl;
 	}

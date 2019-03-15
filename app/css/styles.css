@@ -51,7 +51,7 @@ html {
   color: #343a40; }
 
 .nav-item a:hover {
-  background-color: #cecbc5;
+  background-color: #ebeded;
   border-radius: 5px; }
 
 .nav-hide {
@@ -81,13 +81,13 @@ html {
   margin-bottom: 5px; }
 
 .sidenav li:hover {
-  background-color: #cecbc5;
+  background-color: #ebeded;
   border-radius: 5px;
   cursor: pointer;
   transform: scale(1.05); }
 
 .sidenav-button-active {
-  background-color: #cecbc5;
+  background-color: #ebeded;
   border-radius: 5px; }
 
 .sidenav-active {
@@ -107,9 +107,9 @@ html {
 url("../img/temperature-background.jpg");
 */
 #backgroundDiv {
-  background-color: #cecbc5;
+  background-color: #ebeded;
   padding-bottom: 50px;
-  background-image: url("../img/background1-large.jpg");
+  background-image: url("../img/background4.jpg");
   background-size: cover; }
 
 .jumbotron h1 {
@@ -169,7 +169,7 @@ url("../img/temperature-background.jpg");
   line-height: 2.1; }
 
 #historyDiv {
-  background-color: #cecbc5; }
+  background-color: #ebeded; }
 
 #resoursesDiv .row {
   text-align: center; }
@@ -181,7 +181,7 @@ url("../img/temperature-background.jpg");
   transition: 0.5s; }
 
 .resources-item i:hover {
-  background-color: #cecbc5;
+  background-color: #ebeded;
   border-radius: 5px;
   cursor: pointer;
   transform: scale(1.05); }
@@ -190,7 +190,7 @@ url("../img/temperature-background.jpg");
 -Get rid of JavaScript footer when done
 */
 #footerDiv {
-  background-color: #cecbc5;
+  background-color: #ebeded;
   padding-top: 50px;
   padding-bottom: 25px; }
 
@@ -235,6 +235,8 @@ url("../img/temperature-background.jpg");
     display: inline; } }
 
 @media (max-width: 575.98px) {
+  #backgroundDiv {
+    background-position: right top; }
   .jumbotron h1 {
     font-size: 60.075px; }
   .card {
